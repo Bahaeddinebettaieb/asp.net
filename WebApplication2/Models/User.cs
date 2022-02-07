@@ -8,6 +8,10 @@ namespace WebApplication2.Models
     public class User
     {
         public int ID { get; set; }
-        public string name { get; set; }
+        public string fullname { get; set; }
+        public string email { get; set; }
+        public string phone { get; set; }
+        public int age { get; set; }
+        public int location { get; set; }
     }
 }
