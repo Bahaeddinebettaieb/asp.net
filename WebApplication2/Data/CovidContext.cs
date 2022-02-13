@@ -15,5 +15,7 @@ namespace WebApplication2.Data
         }
 
         public DbSet<WebApplication2.Models.User> User { get; set; }
+
+        public DbSet<WebApplication2.Models.Hospital> Hospital { get; set; }
     }
 }
