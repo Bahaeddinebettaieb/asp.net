@@ -22,7 +22,8 @@ namespace WebApplication2.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.User.ToListAsync());
+            var covidContext = _context.User.Include(u => u.hospital);
+            return View(await covidContext.ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -34,6 +35,7 @@ namespace WebApplication2.Controllers
             }
 
             var user = await _context.User
+                .Include(u => u.hospital)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (user == null)
             {
@@ -46,7 +48,7 @@ namespace WebApplication2.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["HospitaId"] = new SelectList(_context.Hospital, "ID", "ID");
+            ViewData["HospitalId"] = new SelectList(_context.Hospital, "ID", "nameHospital");
             return View();
         }
 
@@ -55,7 +57,7 @@ namespace WebApplication2.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,fullname,email,phone,age,location,HospitaId")] User user)
+        public async Task<IActionResult> Create([Bind("ID,fullname,email,phone,age,location,HospitalId")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -63,7 +65,7 @@ namespace WebApplication2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["HospitaId"] = new SelectList(_context.Hospital, "ID", "ID", user.HospitalId);
+            ViewData["HospitalId"] = new SelectList(_context.Hospital, "ID", "nameHospital", user.HospitalId);
             return View(user);
         }
 
@@ -80,6 +82,7 @@ namespace WebApplication2.Controllers
             {
                 return NotFound();
             }
+            ViewData["HospitalId"] = new SelectList(_context.Hospital, "ID", "nameHospital", user.HospitalId);
             return View(user);
         }
 
@@ -88,7 +91,7 @@ namespace WebApplication2.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,fullname,email,phone,age,location")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,fullname,email,phone,age,location,HospitalId")] User user)
         {
             if (id != user.ID)
             {
@@ -115,6 +118,7 @@ namespace WebApplication2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["HospitalId"] = new SelectList(_context.Hospital, "ID", "nameHospital", user.HospitalId);
             return View(user);
         }
 
@@ -127,6 +131,7 @@ namespace WebApplication2.Controllers
             }
 
             var user = await _context.User
+                .Include(u => u.hospital)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (user == null)
             {

@@ -148,11 +148,6 @@ C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\WebApplication2.dll
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\WebApplication2.pdb
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\WebApplication2.genruntimeconfig.cache
-C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Create.cshtml.g.cs
-C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Delete.cshtml.g.cs
-C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Details.cshtml.g.cs
-C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Edit.cshtml.g.cs
-C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Index.cshtml.g.cs
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\bin\Debug\netcoreapp3.1\WebApplication2.StaticWebAssets.xml
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -178,3 +173,8 @@ C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Hospitals\Details.cshtml.g.cs
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Hospitals\Edit.cshtml.g.cs
 C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Hospitals\Index.cshtml.g.cs
+C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Create.cshtml.g.cs
+C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Delete.cshtml.g.cs
+C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Details.cshtml.g.cs
+C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Edit.cshtml.g.cs
+C:\Users\Baha\source\repos\WebApplication2\WebApplication2\obj\Debug\netcoreapp3.1\Razor\Views\Users\Index.cshtml.g.cs

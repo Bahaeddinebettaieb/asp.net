@@ -10,15 +10,21 @@ namespace WebApplication2.Models
     {
         public int ID { get; set; }
         [Required]
+        [Display(Name = "Fullname")]
         public string fullname { get; set; }
         [Required]
+        [Display(Name = "Email")]
         public string email { get; set; }
         [Required]
+        [Display(Name = "Phone number")]
         public string phone { get; set; }
         [Required]
+        [Display(Name = "Age")]
         public int age { get; set; }
         [Required]
+        [Display(Name = "Location")]
         public int location { get; set; }
+        [Display(Name = "Hospital name")]
         public int HospitalId { get; set; }
         public virtual Hospital hospital { get; set; }
     }
