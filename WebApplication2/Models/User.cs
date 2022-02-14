@@ -23,7 +23,7 @@ namespace WebApplication2.Models
         public int age { get; set; }
         [Required]
         [Display(Name = "Location")]
-        public int location { get; set; }
+        public string location { get; set; }
         [Display(Name = "Hospital name")]
         public int HospitalId { get; set; }
         public virtual Hospital hospital { get; set; }
