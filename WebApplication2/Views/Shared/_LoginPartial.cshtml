@@ -4,6 +4,35 @@
 @inject SignInManager<AuthUser> SignInManager
 @inject UserManager<AuthUser> UserManager
 
+<style>
+    .button {
+        background-color: #0a95ff; 
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .buttonLogin {
+        background-color: #e1ecf4;
+        border: none;
+        color: #39739d;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -19,10 +48,10 @@
 else
 {
     <li class="nav-item">
-        <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        <a class="button" id="register" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        <a class="buttonLogin" id="login" asp-area="Identity" asp-page="/Account/Login">Login</a>
     </li>
 }
 </ul>
