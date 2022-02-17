@@ -26,6 +26,7 @@ namespace WebApplication2.Models
         public string location { get; set; }
         [Display(Name = "Hospital name")]
         public int HospitalId { get; set; }
+        [Display(Name = "Hospital name")]
         public virtual Hospital hospital { get; set; }
     }
 }

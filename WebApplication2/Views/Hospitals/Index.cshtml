@@ -5,11 +5,32 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<style>
+    .button {
+        background-color: #0a95ff;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+
+
 <h1>List of hospitals</h1>
 @if (User.Identity.IsAuthenticated)
 {
     <p>
-        <a asp-action="Create">Create New Hospital</a>
+        <a class="button" asp-action="Create">Create New Hospital</a>
     </p>
 }
 
@@ -28,22 +49,22 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.nameHospital)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.cityHospital)
-            </td>
-
-            @if (User.Identity.IsAuthenticated)
-            {
+            <tr>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    @Html.DisplayFor(modelItem => item.nameHospital)
                 </td>
-            }
+                <td>
+                    @Html.DisplayFor(modelItem => item.cityHospital)
+                </td>
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID"><i class="material-icons">&#xE254;</i></a>
+                        <a asp-action="Details" asp-route-id="@item.ID"><i class="material-icons">remove_red_eye</i></a>
+                        <a asp-action="Delete" asp-route-id="@item.ID"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                }
             </tr>
         }
     </tbody>
