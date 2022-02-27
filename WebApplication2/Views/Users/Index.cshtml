@@ -84,6 +84,15 @@
                 <a asp-action="Edit" asp-route-id="@item.ID"><i class="material-icons">&#xE254;</i></a>
                 <a asp-action="Details" asp-route-id="@item.ID"><i class="material-icons">remove_red_eye</i></a>
                 <a asp-action="Delete" asp-route-id="@item.ID"><i class="material-icons">&#xE872;</i></a>
+         
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="@item.ID" />
+                    <a id="deleteItem" class="btn btn-sm" data-toggle="modal" data-target="#exampleModalLong"
+                       data-path="@Url.Action("Delete","Users", new {id=item.ID})">
+                        <i class="fa fa-lg fa-trash-alt text-danger"></i>
+                    </a>
+                </form>
+
                 <!--<a data-toggle="modal" data-target="#exampleModalLong" asp-action="Delete" asp-route-id="@item.ID"><i class="material-icons">&#xE872;</i></a>-->
             </td>
                 }
@@ -109,9 +118,23 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <form asp-action="Delete">
                     <input type="hidden"/>
-                    <input type="submit" value="Delete" class="btn btn-danger" />
+                    <Button type="button" id="btnDelete" value="Delete" class="btn btn-danger" />
+
                 </form>
                 </div>
         </div>
     </div>
 </div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    var pathToDelete;
+    $(".deleteItem").click(function (e) {
+        pathToDelete = $(this).data('path');
+    });
+    $("#btnDelete").click(function () {
+        window.location = pathToDelete;
+    });
+
+
+</script>
