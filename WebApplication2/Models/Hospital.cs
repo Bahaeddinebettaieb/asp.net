@@ -15,5 +15,7 @@ namespace WebApplication2.Models
         [Display(Name = "City")]
         public string cityHospital { get; set; }
         public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<Rea> Rea { get; set; }
+        public virtual ICollection<Consultation> Consultation { get; set; }
     }
 }
