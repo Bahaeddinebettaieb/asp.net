@@ -24,5 +24,16 @@ namespace WebApplication2.Data
         public DbSet<WebApplication2.Models.Rea> Rea { get; set; }
 
 
+        public DbSet<WebApplication2.Models.Consultation> Consultation { get; set; }
+
+
+        public DbSet<WebApplication2.Models.Doc> Doc { get; set; }
+
+
+        public DbSet<WebApplication2.Models.Medecin> Medecin { get; set; }
+
+
+        public DbSet<WebApplication2.Models.Consultation2> Consultation2 { get; set; }
+
     }
 }

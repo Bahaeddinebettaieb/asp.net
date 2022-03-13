@@ -84,15 +84,14 @@
                 <a asp-action="Edit" asp-route-id="@item.ID"><i class="material-icons">&#xE254;</i></a>
                 <a asp-action="Details" asp-route-id="@item.ID"><i class="material-icons">remove_red_eye</i></a>
                 <a asp-action="Delete" asp-route-id="@item.ID"><i class="material-icons">&#xE872;</i></a>
-         
-                <form asp-action="Delete">
-                    <input type="hidden" asp-for="@item.ID" />
-                    <a id="deleteItem" class="btn btn-sm" data-toggle="modal" data-target="#exampleModalLong"
-                       data-path="@Url.Action("Delete","Users", new {id=item.ID})">
-                        <i class="fa fa-lg fa-trash-alt text-danger"></i>
-                    </a>
-                </form>
 
+                <!--<form asp-action="Delete">
+        <input type="hidden" asp-for="@item.ID" />
+        <a id="deleteItem" class="btn btn-sm" data-toggle="modal" data-target="#exampleModalLong"
+           data-path="@Url.Action("Delete","Users", new {id=item.ID})">
+            <i class="fa fa-lg fa-trash-alt text-danger"></i>
+        </a>
+    </form>-->
                 <!--<a data-toggle="modal" data-target="#exampleModalLong" asp-action="Delete" asp-route-id="@item.ID"><i class="material-icons">&#xE872;</i></a>-->
             </td>
                 }

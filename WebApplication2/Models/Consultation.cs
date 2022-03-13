@@ -12,10 +12,13 @@ namespace WebApplication2.Models
         [Required]
         [Display(Name = "Date consultation")]
         public DateTime date { get; set; }
-
+        [Required]
+        [Display(Name = "Patient")]
+        public string patient { get; set; }
         [Display(Name = "Hospital name")]
         public int HospitalId { get; set; }
         [Display(Name = "Hospital name")]
         public virtual Hospital hospital { get; set; }
+
     }
 }
